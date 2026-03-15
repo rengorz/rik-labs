@@ -1,0 +1,23 @@
+# .NET
+lab1/bin/
+lab1/obj/
+
+# Node
+lab2/node_modules/
+lab5/node_modules/
+lab5/dist/
+
+# Python
+lab3/__pycache__/
+lab3/*.pyc
+lab3/.venv/
+
+# Android
+lab4/.gradle/
+lab4/build/
+lab4/app/build/
+lab4/local.properties
+
+# OS
+.DS_Store
+Thumbs.db

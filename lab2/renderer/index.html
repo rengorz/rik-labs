@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'"/>
+  <title>Форма опитування</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Опитування</h1>
+      <p class="subtitle">Будь ласка, дайте відповіді на запитання нижче</p>
+    </header>
+
+    <div class="progress-wrapper">
+      <span class="progress-label" id="progressLabel">Питання 1 з 5</span>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="question" id="questionText"></p>
+      <textarea id="answerBox" placeholder="Введіть вашу відповідь..."></textarea>
+    </div>
+
+    <div class="actions">
+      <button id="prevBtn" class="btn btn-secondary" disabled>← Назад</button>
+      <button id="nextBtn" class="btn btn-primary">Далі →</button>
+    </div>
+
+    <p class="status" id="statusMsg"></p>
+
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

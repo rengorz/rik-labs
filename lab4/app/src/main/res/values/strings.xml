@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Форма опитування</string>
+    <string name="subtitle">Будь ласка, дайте відповіді на запитання нижче</string>
+    <string name="answer_hint">Введіть вашу відповідь…</string>
+    <string name="btn_prev">← Назад</string>
+    <string name="btn_next">Далі →</string>
+    <string name="btn_finish">Завершити та зберегти</string>
+    <string name="warning_empty">Будь ласка, дайте відповідь перед тим, як продовжити.</string>
+    <string name="dialog_title">Відповідь відсутня</string>
+    <string name="done_title">Опитування завершено</string>
+    <string name="done_message">Дякуємо за участь в опитуванні!\n\nРезультати збережено:\n%1$s</string>
+</resources>

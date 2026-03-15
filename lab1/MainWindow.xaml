@@ -1,0 +1,85 @@
+<Window x:Class="SurveyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Форма опитування" Height="520" Width="680"
+        MinHeight="480" MinWidth="560"
+        WindowStartupLocation="CenterScreen"
+        Background="#F8FAFC">
+
+    <Grid Margin="32">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,24">
+            <TextBlock Text="Опитування"
+                       FontSize="26" FontWeight="Bold"
+                       Foreground="#1E293B"/>
+            <TextBlock Text="Будь ласка, дайте відповіді на запитання нижче"
+                       FontSize="13" Foreground="#64748B" Margin="0,4,0,0"/>
+        </StackPanel>
+
+        <!-- Progress -->
+        <StackPanel Grid.Row="1" Margin="0,0,0,20">
+            <DockPanel>
+                <TextBlock x:Name="ProgressLabel"
+                           Text="Питання 1 з 5"
+                           FontSize="12" Foreground="#64748B"
+                           DockPanel.Dock="Right"/>
+                <TextBlock Text="" />
+            </DockPanel>
+            <Border Height="6" CornerRadius="3" Background="#E2E8F0" Margin="0,6,0,0">
+                <Border x:Name="ProgressBar" HorizontalAlignment="Left"
+                        Height="6" CornerRadius="3" Background="#2563EB"
+                        Width="0"/>
+            </Border>
+        </StackPanel>
+
+        <!-- Question area -->
+        <Border Grid.Row="2" Background="White" CornerRadius="12"
+                BorderBrush="#E2E8F0" BorderThickness="1"
+                Padding="24">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock x:Name="QuestionText"
+                           FontSize="17" FontWeight="SemiBold"
+                           Foreground="#1E293B"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,20"/>
+                <TextBox x:Name="AnswerBox"
+                         Height="90"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"
+                         VerticalContentAlignment="Top"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Navigation buttons -->
+        <Grid Grid.Row="3" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="12"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="PrevButton" Grid.Column="0"
+                    Content="← Назад"
+                    Click="PrevButton_Click"
+                    Background="#64748B"/>
+            <Button x:Name="NextButton" Grid.Column="2"
+                    Content="Далі →"
+                    Click="NextButton_Click"/>
+        </Grid>
+
+        <!-- Status -->
+        <TextBlock x:Name="StatusLabel" Grid.Row="4"
+                   Margin="0,14,0,0"
+                   FontSize="12" Foreground="#16A34A"
+                   HorizontalAlignment="Center"
+                   Visibility="Collapsed"/>
+    </Grid>
+</Window>
