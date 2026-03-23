@@ -15,7 +15,6 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Header -->
         <StackPanel Grid.Row="0" Margin="0,0,0,24">
             <TextBlock Text="Опитування"
                        FontSize="26" FontWeight="Bold"
@@ -24,7 +23,6 @@
                        FontSize="13" Foreground="#64748B" Margin="0,4,0,0"/>
         </StackPanel>
 
-        <!-- Progress -->
         <StackPanel Grid.Row="1" Margin="0,0,0,20">
             <DockPanel>
                 <TextBlock x:Name="ProgressLabel"
@@ -40,7 +38,6 @@
             </Border>
         </StackPanel>
 
-        <!-- Question area -->
         <Border Grid.Row="2" Background="White" CornerRadius="12"
                 BorderBrush="#E2E8F0" BorderThickness="1"
                 Padding="24">
@@ -59,7 +56,6 @@
             </StackPanel>
         </Border>
 
-        <!-- Navigation buttons -->
         <Grid Grid.Row="3" Margin="0,20,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -75,7 +71,6 @@
                     Click="NextButton_Click"/>
         </Grid>
 
-        <!-- Status -->
         <TextBlock x:Name="StatusLabel" Grid.Row="4"
                    Margin="0,14,0,0"
                    FontSize="12" Foreground="#16A34A"

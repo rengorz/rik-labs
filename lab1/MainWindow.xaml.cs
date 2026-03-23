@@ -35,7 +35,7 @@ public partial class MainWindow : Window
         ProgressLabel.Text = $"Питання {index + 1} з {_questions.Length}";
 
         double fraction = (double)(index + 1) / _questions.Length;
-        ProgressBar.Width = fraction * (ActualWidth - 64);
+        ProgressBar.Width = Math.Max(0, fraction * (ActualWidth - 64));
 
         PrevButton.IsEnabled = index > 0;
 

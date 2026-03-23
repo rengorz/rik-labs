@@ -5,9 +5,28 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UseWPF>true</UseWPF>
     <AssemblyName>SurveyApp</AssemblyName>
     <RootNamespace>SurveyApp</RootNamespace>
+    <!-- ↓ Змінити тут: WPF або WinForms -->
+    <UIFramework>WPF</UIFramework>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(UIFramework)' == 'WPF'">
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(UIFramework)' == 'WinForms'">
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(UIFramework)' == 'WinForms'">
+    <Compile Remove="App.xaml.cs" />
+    <Compile Remove="MainWindow.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UIFramework)' == 'WPF'">
+    <Compile Remove="ProgramWinForms.cs" />
+    <Compile Remove="MainWindowWinForms.cs" />
+  </ItemGroup>
 
 </Project>
